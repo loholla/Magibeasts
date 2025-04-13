@@ -383,10 +383,10 @@
 -analyzer:"/home/glassfrog/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/home/glassfrog/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"/home/glassfrog/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
-"Assets/BattleHUD.cs"
-"Assets/BattleSystem.cs"
 "Assets/Dialogue-panel.cs"
 "Assets/Inventory.cs"
+"Assets/ItemHUD.cs"
+"Assets/ShopSystem.cs"
 "Assets/Unit.cs"
 "Assets/store_dialogue.cs"
 -langversion:9.0
