@@ -11,15 +11,16 @@ public class BattlerHUD : MonoBehaviour
 
     public Slider healthSlider;
 
-    public void SetHUD(Battler battler)
+    public void SetHUD(CharStats battler)
     {
-        HUDName.text = battler.battlerName.ToString();
-        HUDLevel.text = "Lvl " + battler.level.ToString();
+        HUDName.text = battler.charName.ToString();
+        HUDLevel.text = "Lvl " + battler.lvl.ToString();
         healthSlider.maxValue = battler.maxHP;
-        healthSlider.value = battler.currentHP;
+        healthSlider.value = battler.currHP;
     }
 
     public void SetHealth(int hp) {
         healthSlider.value = hp;
     }
+
 }

@@ -343,13 +343,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441947478}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64, y: -2.34, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &614200871
 GameObject:
@@ -554,8 +554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fcf57fe498a6e040b3cb7a8ebe6d5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 3703463058670933703, guid: d6626fc1a4e8f9e4488f6b2e41da184e, type: 3}
-  enemyPrefab: {fileID: 1743150930503554436, guid: 9d33ef130104f41458f288d877543b41, type: 3}
+  playerPrefab: {fileID: 4680187230578945654, guid: e84ad5ff4ac7fac428cf060f3e359b42, type: 3}
+  enemyPrefab: {fileID: 1034586925555888048, guid: 9d33ef130104f41458f288d877543b41, type: 3}
   buttonPrefab: {fileID: 5142211255420496922, guid: 6dc4dfec2d185204eb1e6907c9f078d0, type: 3}
   playerPosition: {fileID: 1042654606}
   enemyPosition: {fileID: 441947479}
@@ -563,6 +563,7 @@ MonoBehaviour:
   playerHUD: {fileID: 1486937135}
   enemyHUD: {fileID: 1402649041}
   state: 0
+  buttonManager: {fileID: 0}
 --- !u!4 &767312619
 Transform:
   m_ObjectHideFlags: 0
@@ -895,13 +896,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042654605}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.14, y: -2.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1278111769
 GameObject:
@@ -930,7 +931,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278111769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 685, y: 135, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -975,7 +976,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8d0fe6cac762b5a4da17713d67651122, type: 2}
+  - {fileID: 2100000, guid: 15373d8b20e18014689b3cc0cc6572c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

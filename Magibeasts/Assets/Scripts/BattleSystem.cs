@@ -27,29 +27,32 @@ public class BattleSystem : MonoBehaviour
 
     public TMP_Text dialogueText;
 
-    Battler playerBattler;
-    Battler enemyBattler;
+    CharStats playerBattler;
+    CharStats enemyBattler;
 
     public BattlerHUD playerHUD;
     public BattlerHUD enemyHUD;
     public CurrentState state;
 
+    public ButtonManager buttonManager;
+    public Dmg damage;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        buttonManager = gameObject.AddComponent(typeof(ButtonManager)) as ButtonManager;
         state = CurrentState.START;
         StartCoroutine(BattleSetup());
     }
-
-    IEnumerator BattleSetup() {
+     IEnumerator BattleSetup() {
         GameObject playerGO = Instantiate(playerPrefab, playerPosition);
-        playerBattler = playerGO.GetComponent<Battler>();
+        playerBattler = playerGO.GetComponent<CharStats>();
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyPosition);
-        enemyBattler = enemyGO.GetComponent<Battler>();
+        enemyBattler = enemyGO.GetComponent<CharStats>();
 
-        dialogueText.text = "A wild " + enemyBattler.battlerName + " approaches!";
+        dialogueText.text = "A wild " + enemyBattler.charName + " approaches!";
 
         playerHUD.SetHUD(playerBattler);
         enemyHUD.SetHUD(enemyBattler);
@@ -57,37 +60,67 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         state = CurrentState.PLAYERTURN;
+        damage = gameObject.AddComponent(typeof(Dmg)) as Dmg;
+        buttonManager.CreateFirstSetButtons(buttonPrefab);
         PlayerTurn();
     }
 
     void PlayerTurn() {
-        var panel = GameObject.Find("DialogueBox");
         dialogueText.text = "Choose your action: ";
-
-        GameObject button1 = Instantiate<GameObject>(buttonPrefab);
-
         
+        GameObject b1 = GameObject.Find("AttackButton");
+        b1.GetComponent<Button>().onClick.AddListener(delegate() {OnAttackButton();});
 
-        button1.GetComponentInChildren<TMP_Text>().text = "Attack";
-        button1.GetComponent<RectTransform>().SetParent(panel.transform);
-        
-        Vector3 pos = Vector3.zero;
-        pos.x = 75f;
-        pos.y = 27f;
-        pos.z = -5f;
-        button1.GetComponent<RectTransform>().transform.position = pos;
-
-        Vector2 dimensions = Vector2.zero;
-        dimensions.x = 92f;
-        dimensions.y = 35f;
-        button1.GetComponent<RectTransform>().sizeDelta = dimensions;
-
-        Vector3 scale = Vector3.zero;
-        scale.x = 1.25f;
-        scale.y = 1.147959f;
-        scale.z = 1f;
-        button1.GetComponent<RectTransform>().localScale = scale;
     }
 
+    public void OnAttackButton() {
+        if (state != CurrentState.PLAYERTURN) return;
 
+        StartCoroutine(PlayerAttack());
+    }
+
+    IEnumerator PlayerAttack() {
+        state = CurrentState.ENEMYTURN;
+
+        dialogueText.text = playerBattler.charName + " is attacking!";
+
+        yield return new WaitForSeconds(2f);
+
+        bool death = enemyBattler.takeDmg(damage.calcDmg(playerBattler, enemyBattler, playerBattler.attack, false));
+
+        if (death) {
+            state = CurrentState.WON;
+            EndBattle();
+        } else {
+            enemyHUD.SetHealth(enemyBattler.currHP);
+            StartCoroutine(EnemyTurn());
+        }
+    }
+
+    IEnumerator EnemyTurn() {
+        dialogueText.text = enemyBattler.charName + " is attacking!";
+        
+        yield return new WaitForSeconds(1f);
+
+        bool death = playerBattler.takeDmg(damage.calcDmg(enemyBattler, playerBattler, enemyBattler.attack, false));
+
+        playerHUD.SetHealth(playerBattler.currHP);
+
+        yield return new WaitForSeconds(1f);
+
+        if (death) {
+            state = CurrentState.LOST;
+            EndBattle();
+        } else {
+            state = CurrentState.PLAYERTURN;
+            PlayerTurn();
+        }
+    }
+    void EndBattle() {
+        if (state == CurrentState.WON) {
+            dialogueText.text = "You win!";
+        } else if (state == CurrentState.LOST) {
+            dialogueText.text = "You lose! Game Over.";
+        }
+    }
 }
