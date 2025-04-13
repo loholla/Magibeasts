@@ -3,10 +3,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    // A dictionary to hold item names and quantities
     private Dictionary<string, int> items = new Dictionary<string, int>();
 
-    // Add an item to the inventory
     public void AddItem(string itemName)
     {
         if (items.ContainsKey(itemName))
@@ -18,22 +16,28 @@ public class Inventory : MonoBehaviour
             items[itemName] = 1;
         }
 
-        Debug.Log($"Added {itemName}. Now have {items[itemName]}.");
+        Debug.Log($"Added {itemName}. Total: {items[itemName]}");
     }
 
-    // Optional: Get the quantity of a specific item
     public int GetItemCount(string itemName)
     {
         return items.ContainsKey(itemName) ? items[itemName] : 0;
     }
 
-    // Optional: Display the inventory
     public void PrintInventory()
     {
-        Debug.Log("Inventory:");
-        foreach (var kvp in items)
+        Debug.Log("Inventory Contents:");
+        foreach (var item in items)
         {
-            Debug.Log($"ASDF{kvp.Key}: {kvp.Value}");
+            Debug.Log($"{item.Key}: {item.Value}");
+        }
+    }
+
+        void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            PrintInventory();
         }
     }
 }

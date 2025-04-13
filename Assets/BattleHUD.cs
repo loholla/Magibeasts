@@ -9,6 +9,7 @@ public class BattleHUD : MonoBehaviour
     // Optional: References for item details if you're reusing this HUD for items
     public Text itemNameText;
     public Text itemPriceText;
+	string itemName;
 
     // This method updates the player's money display
     public void SetPlayerMoney(int money)
@@ -27,6 +28,7 @@ public class BattleHUD : MonoBehaviour
     // This method sets the item details in the HUD, if you're also using it for the shop's item display.
     public void SetItemDetails(string itemName, int price)
     {
+		itemName = name;
         if(itemNameText != null && itemPriceText != null)
         {
             itemNameText.text = itemName;
@@ -36,5 +38,10 @@ public class BattleHUD : MonoBehaviour
         {
             Debug.LogWarning("itemNameText and/or itemPriceText are not assigned in the inspector.");
         }
+    }
+
+	public string GetItemName()
+    {
+        return itemName;
     }
 }

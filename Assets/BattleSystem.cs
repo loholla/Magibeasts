@@ -29,7 +29,7 @@ public class ShopSystem : MonoBehaviour
 
 	public Text levelText; // Assign this in the inspector
 
-	private Inventory playerInventory;
+	public Inventory playerInventory;
 
 
     // Start is called before the first frame update
@@ -98,8 +98,6 @@ public class ShopSystem : MonoBehaviour
 
 	public void OnBuyButton()
 	{
-		Debug.Log($"Buy button pressed. selectedItemButton = {selectedItemButton}");
-
 		if (selectedItemButton == null)
 		{
 			dialogueText.text = "Please select an item to buy first!";
@@ -110,12 +108,18 @@ public class ShopSystem : MonoBehaviour
 		if (playerMoney >= itemPrice)
 		{
 			playerMoney -= itemPrice;
-			dialogueText.text = $"Item Purchased";
-			// playerInventory?.AddItem("Health Potion");
-			// playerInventory.PrintInventory();
+			dialogueText.text = "You bought a Health Potion!";
 			playerHUD?.SetPlayerMoney(playerMoney);
 
-			// Reset button color
+			Text itemText = selectedItemButton.GetComponentInChildren<Text>();
+			string itemName = itemText.text;
+
+
+			// ✅ Add to inventory
+			playerInventory?.AddItem(itemName);
+			playerInventory?.PrintInventory();
+
+			// Reset selection
 			selectedItemButton.image.color = originalColor;
 			selectedItemButton = null;
 
@@ -127,6 +131,8 @@ public class ShopSystem : MonoBehaviour
 			Invoke(nameof(UpdateDialogueText), 2f);
 		}
 	}
+
+
 
 
 
