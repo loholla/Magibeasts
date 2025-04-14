@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.Build.Content;
+// using UnityEditor.Build.Content;
 using Unity.VisualScripting;
 using System;
+using UnityEngine.SceneManagement;
 
 public enum CurrentState {
     START,
@@ -119,6 +120,7 @@ public class BattleSystem : MonoBehaviour
     void EndBattle() {
         if (state == CurrentState.WON) {
             dialogueText.text = "You win!";
+            SceneManager.LoadScene("ShopScene");
         } else if (state == CurrentState.LOST) {
             dialogueText.text = "You lose! Game Over.";
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // This script implements a basic shop system that allows the player to purchase a shop item.
 // In this example, we assume the shop sells a "Health Potion" with a static price of 10 coins.
@@ -38,6 +39,8 @@ public class ShopSystem : MonoBehaviour
         // Find the button by name ("buybutton") and attach the OnBuyButton listener.
         Button buyButton = GameObject.Find("buybutton").GetComponent<Button>();
         buyButton.onClick.AddListener(OnBuyButton);
+		Button nextButton = GameObject.Find("NextButton").GetComponent<Button>();
+		nextButton.onClick.AddListener(OnNextButton);
 
 		// Make sure the player GameObject has this script
 		playerInventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
@@ -132,9 +135,9 @@ public class ShopSystem : MonoBehaviour
 		}
 	}
 
-
-
-
+	public void OnNextButton(){
+		SceneManager.LoadScene("BattleScene");
+	}
 
     // Called when the itemHUD is selected (clicked).
     void OnItemHUDSelected()
