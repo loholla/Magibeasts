@@ -46,6 +46,7 @@ public class BattleSystem : MonoBehaviour
         state = CurrentState.START;
         StartCoroutine(BattleSetup());
     }
+
      IEnumerator BattleSetup() {
         GameObject playerGO = Instantiate(playerPrefab, playerPosition);
         playerBattler = playerGO.GetComponent<CharStats>();
@@ -85,7 +86,9 @@ public class BattleSystem : MonoBehaviour
 
         dialogueText.text = playerBattler.charName + " is attacking!";
 
-        yield return new WaitForSeconds(2f);
+        playerBattler.GetComponent<AttackLunge>()?.TriggerLunge();
+
+        yield return new WaitForSeconds(1f);
 
         bool death = enemyBattler.takeDmg(damage.calcDmg(playerBattler, enemyBattler, playerBattler.attack, false));
 
@@ -99,7 +102,11 @@ public class BattleSystem : MonoBehaviour
     }
 
     IEnumerator EnemyTurn() {
+        yield return new WaitForSeconds(1f);
+
         dialogueText.text = enemyBattler.charName + " is attacking!";
+
+        enemyBattler.GetComponent<AttackLunge>()?.TriggerLunge();
         
         yield return new WaitForSeconds(1f);
 
@@ -117,12 +124,18 @@ public class BattleSystem : MonoBehaviour
             PlayerTurn();
         }
     }
+    
     void EndBattle() {
         if (state == CurrentState.WON) {
-            dialogueText.text = "You win!";
-            SceneManager.LoadScene("ShopScene");
+            dialogueText.text = "You win! Proceeding...";
+            StartCoroutine(LoadSceneAfterDelay("ShopScene", 3f));
         } else if (state == CurrentState.LOST) {
             dialogueText.text = "You lose! Game Over.";
         }
+    }
+
+    private IEnumerator LoadSceneAfterDelay(string sceneName, float delay){
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 }

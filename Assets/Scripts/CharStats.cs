@@ -24,6 +24,11 @@ public class CharStats : MonoBehaviour
             currHP = 0;
         }
 
+        BlinkColor blinker = GetComponent<BlinkColor>();
+        if(blinker != null){
+            blinker.TriggerBlink();
+        }
+
         return(currHP == 0);
     }
 

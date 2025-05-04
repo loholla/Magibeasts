@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7785482281404510689}
   - component: {fileID: 7418567336325288089}
   - component: {fileID: -7078451936564273231}
+  - component: {fileID: -3188808269330436066}
+  - component: {fileID: -8042782229410757205}
   m_Layer: 0
   m_Name: Flufflare
   m_TagString: Untagged
@@ -109,3 +111,32 @@ MonoBehaviour:
   specialAttack: 20
   specialDefense: 20
   speed: 10
+--- !u!114 &-3188808269330436066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4680187230578945654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b32add7f4a9a824789bfbf15cd5f076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showingColor: 0
+  blinkCompleteTime: 0
+--- !u!114 &-8042782229410757205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4680187230578945654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca3855b18b7df94593f9bcb9514cc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lungeDistance: 0.5
+  lungeDuration: 0.2
+  isPlayer: 0
