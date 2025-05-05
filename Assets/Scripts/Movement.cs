@@ -31,4 +31,10 @@ public class Movement : MonoBehaviour
         playerGO = Instantiate(PlayerObject, transform.GetChild(1).position, transform.GetChild(1).rotation);
         playerGO.transform.parent = transform;
     }
+
+    void set_player(GameObject prefab){
+        PlayerObject = prefab;
+        playerGO = Instantiate(prefab, transform.GetChild(1).position, transform.GetChild(1).rotation);
+        playerGO.transform.parent = transform;
+    }
 }
