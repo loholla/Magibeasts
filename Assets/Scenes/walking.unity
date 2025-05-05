@@ -1940,7 +1940,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  PlayerObject: {fileID: 4680187230578945654, guid: e84ad5ff4ac7fac428cf060f3e359b42, type: 3}
+  windbunnyPrefab: {fileID: 8370234970270961752, guid: 2a71e197f7f11184fbabed9eb428ba13, type: 3}
+  foxtrotPrefab: {fileID: 7442032925440587724, guid: a8ec5f1152136a64bb6a765413092a47, type: 3}
+  rooPrefab: {fileID: 8518967499778917271, guid: ec86d01d9cb4f884f811cdb44f0700de, type: 3}
+  mushroomPrefab: {fileID: 1034586925555888048, guid: 9d33ef130104f41458f288d877543b41, type: 3}
+  fluffPrefab: {fileID: 4680187230578945654, guid: e84ad5ff4ac7fac428cf060f3e359b42, type: 3}
+  GAVIN: {fileID: 8627929911569962004, guid: eda6d1b945d87594f860ce9199288f66, type: 3}
+  PlayerObject: {fileID: 0}
 --- !u!114 &705064085
 MonoBehaviour:
   m_ObjectHideFlags: 0
