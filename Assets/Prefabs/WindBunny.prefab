@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5602738356499929167}
   - component: {fileID: 8671082212623355734}
   - component: {fileID: 950374017350536658}
+  - component: {fileID: -1630632762296904928}
+  - component: {fileID: 3382123805532428818}
   m_Layer: 0
   m_Name: WindBunny
   m_TagString: Untagged
@@ -109,3 +111,32 @@ MonoBehaviour:
   specialAttack: 20
   specialDefense: 20
   speed: 10
+--- !u!114 &-1630632762296904928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370234970270961752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca3855b18b7df94593f9bcb9514cc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lungeDistance: 0.5
+  lungeDuration: 0.2
+  isPlayer: 1
+--- !u!114 &3382123805532428818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370234970270961752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b32add7f4a9a824789bfbf15cd5f076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showingColor: 0
+  blinkCompleteTime: 0
