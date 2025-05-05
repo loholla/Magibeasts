@@ -34,8 +34,7 @@ public class Movement : MonoBehaviour
     }
 
     void Start(){
-        playerGO = Instantiate(PlayerObject, transform.GetChild(1).position, transform.GetChild(1).rotation);
-        playerGO.transform.parent = transform;
+        set_player(PlayerSelection.playSelection);
     }
 
     void set_player(int num){

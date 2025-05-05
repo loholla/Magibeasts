@@ -15,11 +15,12 @@ public class Platform : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         if (other.CompareTag("Player")){
             if (platform == "battle"){
+                PlayerSelection.setESelection();
                 Debug.Log("Battle scene");
                 SceneManager.LoadScene("BattleScene");
             } else if (platform == "shop"){
                 Debug.Log("Shop scene");
-                SceneManager.LoadScene("ShopScene");
+                //SceneManager.LoadScene("ShopScene");
             } else {
                 Debug.Log("How did you get here?");
             }

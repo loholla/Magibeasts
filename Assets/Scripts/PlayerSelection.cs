@@ -9,8 +9,8 @@ public class PlayerSelection : MonoBehaviour
         playSelection = x;
     }
 
-    public static void setESelection(int x) {
-        enemySelection = x;
+    public static void setESelection() {
+        enemySelection = UnityEngine.Random.Range(1,6);
     }
 
 }
