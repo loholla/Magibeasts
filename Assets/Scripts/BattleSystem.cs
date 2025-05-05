@@ -47,6 +47,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(BattleSetup());
     }
      IEnumerator BattleSetup() {
+        //assignPrefabs();
         GameObject playerGO = Instantiate(playerPrefab, playerPosition);
         playerBattler = playerGO.GetComponent<CharStats>();
 
@@ -125,4 +126,12 @@ public class BattleSystem : MonoBehaviour
             dialogueText.text = "You lose! Game Over.";
         }
     }
+
+    void assignPrefabs(GameObject player, GameObject enemy) 
+    {
+        playerPrefab = player;
+        enemyPrefab = enemy;
+    }
+
+
 }
