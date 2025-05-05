@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2895819661799851480}
   - component: {fileID: 9130689187905858058}
   - component: {fileID: 9159191703518195703}
+  - component: {fileID: 7143884680156564485}
+  - component: {fileID: 565945162155639473}
   m_Layer: 0
   m_Name: Roo
   m_TagString: Untagged
@@ -109,3 +111,32 @@ MonoBehaviour:
   specialAttack: 20
   specialDefense: 20
   speed: 10
+--- !u!114 &7143884680156564485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518967499778917271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b32add7f4a9a824789bfbf15cd5f076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showingColor: 0
+  blinkCompleteTime: 0
+--- !u!114 &565945162155639473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518967499778917271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca3855b18b7df94593f9bcb9514cc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lungeDistance: 0.5
+  lungeDuration: 0.2
+  isPlayer: 1

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6472863529345895738}
   - component: {fileID: 4689847240785263605}
   - component: {fileID: 4825251116758042066}
+  - component: {fileID: -8777860624268816474}
+  - component: {fileID: 4841022611416079798}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -109,3 +111,32 @@ MonoBehaviour:
   specialAttack: 20
   specialDefense: 20
   speed: 10
+--- !u!114 &-8777860624268816474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627929911569962004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca3855b18b7df94593f9bcb9514cc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lungeDistance: 0.5
+  lungeDuration: 0.2
+  isPlayer: 1
+--- !u!114 &4841022611416079798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627929911569962004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b32add7f4a9a824789bfbf15cd5f076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showingColor: 0
+  blinkCompleteTime: 0
