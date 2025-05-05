@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-// using UnityEditor.Build.Content;
+using UnityEditor.Build.Content;
 using Unity.VisualScripting;
 using System;
 using UnityEngine.SceneManagement;
@@ -52,10 +52,12 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(BattleSetup());
     }
      IEnumerator BattleSetup() {
-        //assignPrefabs();
+        
+        playerPrefab = assignPrefab(PlayerSelection.playSelection);
         GameObject playerGO = Instantiate(playerPrefab, playerPosition);
         playerBattler = playerGO.GetComponent<CharStats>();
 
+        enemyPrefab = assignPrefab(PlayerSelection.enemySelection);
         GameObject enemyGO = Instantiate(enemyPrefab, enemyPosition);
         enemyBattler = enemyGO.GetComponent<CharStats>();
 
@@ -132,11 +134,22 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    void assignPrefabs(GameObject player, GameObject enemy) 
+    GameObject assignPrefab(int num)
     {
-        playerPrefab = player;
-        enemyPrefab = enemy;
+        switch(num) {
+            case 2:
+                return foxtrotPrefab;
+            case 3:
+                return rooPrefab;
+            case 4:
+                return mushroomPrefab;
+            case 5:
+                return fluffPrefab;
+            case 6:
+                return GAVIN;
+            default:
+                return windbunnyPrefab;
+        }
     }
-
 
 }

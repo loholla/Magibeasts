@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6472863529345895738}
   - component: {fileID: 4689847240785263605}
+  - component: {fileID: 4825251116758042066}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 8627929911569962004}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.6, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.53, y: 0.53, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,3 +88,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4825251116758042066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627929911569962004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2b6f52b00961345bd1fa38af8d522d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charName: Gavin
+  lvl: 7
+  maxHP: 75
+  currHP: 75
+  attack: 10
+  defense: 10
+  specialAttack: 20
+  specialDefense: 20
+  speed: 10
