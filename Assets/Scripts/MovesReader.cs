@@ -28,5 +28,8 @@ public class MovesReader : MonoBehaviour
         list = JsonUtility.FromJson<MovesList>(TJSON.text);
     }
 
-
+    public Moves[] getMovesList()
+    {
+        return list.move;
+    }
 }
