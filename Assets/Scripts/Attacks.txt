@@ -1,0 +1,88 @@
+{
+    "move": [
+        {
+            "name": "Punch",
+            "damage": 5,
+            "desc": "Take your fist and swing at your opponent!",
+            "owner": ""
+        },
+        {
+            "name": "Bite",
+            "damage": 5,
+            "desc": "Chomp on your opponent!",
+            "owner": ""
+        },
+        {
+            "name": "Tackle",
+            "damage": 6,
+            "desc": "Dive into your opponent and bring them down!",
+            "owner": ""
+        },
+        {
+            "name": "Body Slam",
+            "damage": 8,
+            "desc": "Jump above and land on top of the enemy using the full weight of your body",
+            "owner": ""
+        },
+        {
+            "name": "Slash",
+            "damage": 4,
+            "desc": "Slash your enemy with your claws!",
+            "owner": ""
+        },
+        {
+            "name": "Pinch",
+            "damage": 1,
+            "desc": "Sneak up on your enemy and pinch them, giving them a fright.",
+            "owner": ""
+        },
+        {
+            "name": "Go for the ankles!",
+            "damage": 3,
+            "desc": "Attack the enemy's ankles",
+            "owner": ""
+        },
+        {
+            "name": "Charge",
+            "damage": 4,
+            "desc": "Charge down your enemy!",
+            "owner": ""
+        },
+        {
+            "name": "Wind Slash",
+            "damage": 5,
+            "desc": "Fire a blade of wind at your enemy",
+            "owner": "WindBunny"
+        },
+        {
+            "name": "Fireball",
+            "damage": 7,
+            "desc": "Shoot a ball of fire at your opponent",
+            "owner": "Flufflare"
+        },
+        {
+            "name": "Spore Cloud",
+            "damage": 4,
+            "desc": "Fire a cloud of spores at your enemy",
+            "owner": "MushroomMan"
+        },
+        {
+            "name": "Dark Chomp",
+            "damage": 5,
+            "desc": "Leaps at the enemy and uses the power of darkness to bite them",
+            "owner": "Foxtrot"
+        },
+        {
+            "name": "Flurry of Kicks",
+            "damage": 6,
+            "desc": "Roo leans on its tail and using its legs to deliver mulitple kicks to the enemy",
+            "owner": "Roo"
+        },
+        {
+            "name": "Bad Grade",
+            "damage": 10,
+            "desc": "The player is assigned a letter from or A, B, C, D, F. The lower the grade, the higher the damage",
+            "owner": "Gavin"
+        }
+    ]
+}

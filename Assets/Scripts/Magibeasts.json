@@ -1,0 +1,41 @@
+{
+    "battler" : [
+        {
+            "battlerName" : "WindBunny",
+            "level" : 5,
+            "maxHP" : 50,
+            "currentHP" : 50
+        },
+        {
+            "battlerName" : "Flufflare",
+            "level" : 5,
+            "maxHP" : 45,
+            "currentHP" : 45
+        },
+        {
+            "battlerName" : "MushroomMan",
+            "level" : 5,
+            "maxHP" : 65,
+            "currentHP" : 65
+        },
+        {
+            "battlerName" : "Foxtrot",
+            "level" : 5,
+            "maxHP" : 55,
+            "currentHP" : 55
+        },
+        {
+            "battlerName" : "Roo",
+            "level" : 5,
+            "maxHP" : 50,
+            "currentHP" : 50
+        },
+        {
+            "battlerName" : "Gavin",
+            "level" : 7,
+            "maxHP" : 100,
+            "currentHP" : 100
+        }
+
+    ]
+}

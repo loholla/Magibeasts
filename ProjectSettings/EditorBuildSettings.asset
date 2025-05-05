@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/walking.unity
+    guid: 100e7bf0408838243b854a2a36e7fdb2
+  - enabled: 1
     path: Assets/Scenes/ShopScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/BattleScene.unity
-    guid: 768eb6d2ab3ef684981d480920b46e73
+    guid: 502258fd596b6dc44ad11b95caf6ca50
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
