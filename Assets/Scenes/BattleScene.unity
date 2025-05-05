@@ -351,6 +351,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &588987472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588987474}
+  - component: {fileID: 588987473}
+  m_Layer: 0
+  m_Name: MovesList
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &588987473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588987472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8483ea2e1e6438d458f81805b3caefbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TJSON: {fileID: 4900000, guid: 511154f16cff64847834c0f7b1864717, type: 3}
+  list:
+    move: []
+--- !u!4 &588987474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588987472}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &614200871
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,8 +611,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fcf57fe498a6e040b3cb7a8ebe6d5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windbunnyPrefab: {fileID: 8370234970270961752, guid: 2a71e197f7f11184fbabed9eb428ba13, type: 3}
+  foxtrotPrefab: {fileID: 7442032925440587724, guid: a8ec5f1152136a64bb6a765413092a47, type: 3}
+  rooPrefab: {fileID: 8518967499778917271, guid: ec86d01d9cb4f884f811cdb44f0700de, type: 3}
+  mushroomPrefab: {fileID: 1034586925555888048, guid: 9d33ef130104f41458f288d877543b41, type: 3}
+  fluffPrefab: {fileID: 4680187230578945654, guid: e84ad5ff4ac7fac428cf060f3e359b42, type: 3}
+  GAVIN: {fileID: 8627929911569962004, guid: eda6d1b945d87594f860ce9199288f66, type: 3}
   playerPrefab: {fileID: 4680187230578945654, guid: e84ad5ff4ac7fac428cf060f3e359b42, type: 3}
-  enemyPrefab: {fileID: 1034586925555888048, guid: 9d33ef130104f41458f288d877543b41, type: 3}
+  enemyPrefab: {fileID: 8627929911569962004, guid: eda6d1b945d87594f860ce9199288f66, type: 3}
   buttonPrefab: {fileID: 5142211255420496922, guid: 6dc4dfec2d185204eb1e6907c9f078d0, type: 3}
   playerPosition: {fileID: 1042654606}
   enemyPosition: {fileID: 441947479}
@@ -1488,3 +1541,4 @@ SceneRoots:
   - {fileID: 228614002}
   - {fileID: 441947479}
   - {fileID: 1042654606}
+  - {fileID: 588987474}
