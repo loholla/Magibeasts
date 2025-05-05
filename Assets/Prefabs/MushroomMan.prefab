@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3632193324122006243}
   - component: {fileID: 6153496286910468470}
   - component: {fileID: 7866982298553985402}
+  - component: {fileID: -3710601912245567786}
+  - component: {fileID: 7826965977715163885}
   m_Layer: 0
   m_Name: MushroomMan
   m_TagString: Untagged
@@ -109,3 +111,32 @@ MonoBehaviour:
   specialAttack: 20
   specialDefense: 20
   speed: 10
+--- !u!114 &-3710601912245567786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034586925555888048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b32add7f4a9a824789bfbf15cd5f076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showingColor: 0
+  blinkCompleteTime: 0
+--- !u!114 &7826965977715163885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034586925555888048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca3855b18b7df94593f9bcb9514cc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lungeDistance: 0.5
+  lungeDuration: 0.2
+  isPlayer: 1
