@@ -18,7 +18,12 @@ public enum CurrentState {
 
 public class BattleSystem : MonoBehaviour
 {
-
+    public GameObject windbunnyPrefab;
+    public GameObject foxtrotPrefab;
+    public GameObject rooPrefab;
+    public GameObject mushroomPrefab;
+    public GameObject fluffPrefab;
+    public GameObject GAVIN;
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
     public GameObject buttonPrefab;

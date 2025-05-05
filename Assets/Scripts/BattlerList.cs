@@ -18,7 +18,6 @@ public class BattlerList : MonoBehaviour
         public int level;
         public int maxHP;
         public int currentHP;
-        public GameObject prefab;
     }
     [System.Serializable]
     public struct BattlersList
@@ -30,17 +29,6 @@ public class BattlerList : MonoBehaviour
 
     void Start()
     {
-        list = JsonUtility.FromJson<BattlersList>(TJSON.text);   
-
-        for (int i = 0; i < list.battler.Length; i++)
-        {
-            switch(list.battler[i].battlerName)
-            {
-                case "WindBunny":
-                    list.battler[i].prefab = Resources.Load("Prefabs/WindBunny.prefab");
-                    break;
-            }
-        }
-        
+        list = JsonUtility.FromJson<BattlersList>(TJSON.text);  
     }
 }
